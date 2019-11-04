@@ -5,13 +5,16 @@ from hw1.yamod.models import Song, Country, Person
 # Register your models here.
 
 class SongAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'genre', 'release_date',)
+    list_filter = ('singers',)
+    search_fields = ('title',)
+    sortable_by = ['title']
 admin.site.register(Song, SongAdmin)
 
 class CountryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name',)
 admin.site.register(Country, CountryAdmin)
 
 class PersonAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('first_name', 'last_name', 'year_of_birth')
 admin.site.register(Person, PersonAdmin)
