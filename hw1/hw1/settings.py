@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #'django.contrib.sites',
-    'hw1.yamod'
+    'hw1.yamod',
+    'rest_framework',
 
 ]
 
